@@ -21,7 +21,7 @@ pipeline {
         stage ('checkout'){
 
             steps{
-                checkout([$class: 'GitSCM', branches: [[name: '2.2.0']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CloneOption', noTags: false, reference: '', shallow: true, timeout: 20]], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'gitcreds', url: 'https://github.com/bhiravabhatla/shopizer.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '2.2.0']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'siddharth23', url: 'https://github.com/siddharth23/shopizer.git']]]);
             }
         }
         stage('Compile') {
